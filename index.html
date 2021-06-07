@@ -1,35 +1,338 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
+<html lang="en">
+<title>Harry Potter</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('https://cdn.crowdpic.net/list-thumb/thumb_l_0340907DD89208BF592435E7F9CD3FE6.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
+body {font-family: "Lato", sans-serif;
+background-color: black;
+color: white;
 }
+.mySlides {display: none}
+h1{ 
+         font-family: 'Oswald', sans-serif; 
+         font-size: 30px; 
+         color: #216182; 
+     } 
+     label { 
+         display: block; 
+         margin-top: 20px; 
+         letter-spacing: 2px; 
+     } 
+     form { 
+         margin: 0 auto; 
+         width: 459px; 
+     } 
+     input, textarea { 
+         width: 439px; 
+         height: 27px; 
+         background-color: #efefef; 
+         border-radius: 6px; 
+         border: 1px solid #dedede; 
+         padding: 10px; 
+         margin-top: 3px; 
+         font-size: 0.9em; 
+         color: #3a3a3a; 
+     } 
+         input:focus, textarea:focus{ 
+             border: 1px solid #97d6eb; 
+         } 
+     
+     textarea{ 
+         height: 60px; 
+         background-color: #efefef; 
+     } 
+     #submit{ 
+         width: 127px; 
+         height: 48px; 
+         text-align: center; 
+         border: none; 
+         margin-top: 20px; 
+         cursor: pointer; 
+     } 
+     #submit:hover{ 
+         color: #fff; 
+         background-color: #216282; 
+         opacity: 0.9; 
+     } 
+     #cancel { 
+         width: 127px; height: 48px; 
+         text-align: center; 
+         border: none; 
+         margin-top: 20px; 
+         cursor: pointer; 
+     } 
+     #cancel:hover{ 
+         color: #fff; 
+         background-color: #216282; 
+         opacity: 0.9; 
+     }
+
+    .modal { 
+         position: fixed; 
+         left: 0; 
+         top: 0; 
+         width: 100%; 
+         height: 100%; 
+         background-color: rgba(0, 0, 0, 0.5); 
+         opacity: 0; 
+         visibility: hidden; 
+         transform: scale(1.1); 
+         transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; 
+     } 
+     .modal-content { 
+         position: absolute; 
+         top: 50%; 
+         left: 50%; 
+         transform: translate(-50%, -50%); 
+         background-color: white; 
+         padding: 1rem 1.5rem; 
+         width: 500px; 
+         height: 350px; 
+         border-radius: 0.5rem; 
+         overflow:scroll; background-color:black;
+         font-family: "Lato", sans-serif;
+     } 
+     .close-button { 
+         float: right; 
+         width: 1.5rem; 
+         line-height: 1.5rem; 
+         text-align: center; 
+         cursor: pointer; 
+         border-radius: 0.25rem; 
+         background-color: lightgray; 
+     } 
+     .close-button:hover { 
+         background-color: darkgray; 
+     } 
+     .show-modal { 
+         opacity: 1; 
+         visibility: visible; 
+         transform: scale(1.0); 
+         transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; 
+     } 
+
+
+
+     
 </style>
 <body>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
+<!-- Navbar -->
+<div class="w3-top" style="background-image: url(https://i.pinimg.com/originals/47/04/58/47045845cd01f56dded85da38b011eb5.png);>
+  <div class="w3-bar w3-black w3-card>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="color: gold">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small"  style="color: white">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="color: white" >TOUR</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More" style="color: white">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#rhdduswjdqh" class="w3-bar-item w3-button">공연정보</a>
+        <a href="#wpwkrwls" class="w3-bar-item w3-button">제작진</a>
+        <a href="#dhtlsmsrlf" class="w3-bar-item w3-button">오시는 길</a>
+      </div>
+    </div>
   </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://images.squarespace-cdn.com/content/v1/59d38e928a02c74a3c81a708/1590698450480-0YRZCBEI7KO9DBE09AV0/ke17ZwdGBToddI8pDm48kJOf7txF5pUijMvpI8BOSGJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1US1WkFxa66KxnvnbGZfbM9VmCxE4OhuaV1YGPO6vDVOlN8tkkwLetXg6b3fv4umx6A/HP-Celebration-Backdrop-REVISION-%2525281%252529.jpg?format=2500w" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://s1.ticketm.net/dam/a/28a/0e92c0d2-c872-474c-a54a-8e1a14bcb28a_930541_TABLET_LANDSCAPE_LARGE_16_9.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://images.squarespace-cdn.com/content/v1/59d38e928a02c74a3c81a708/1596233690544-IFPFABV17EMBKG46V1DL/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/EnjoytheMagicofHP-modifiedhome.jpg?format=2500w" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">CHAPTER ONE </h2>
+    <p class="w3-opacity"><i>Harry Potter and the Sorcerer's Stone</i></p>
+    <p class="w3-justify">Mr. and Mrs. Dursley, ofr number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much. They were the last people you'd expect to be involved in anything strange or mysterous, because the just didn't hold with such nonsense. 
+
+    <p class="w3-justify">
+Mr. Dursley was the director of a firm called Grunnings, which made dreills. He was a big, beefy man with hardly any neck, altough he did have a very large mustache. Mrs, Dusley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning ober garden fences, spying on the neighbors. The Dursleys had a samll son called Dudley and in their opinion there was no finer boy anywhere.
+    </p>
+
+    <img src="https://i.pinimg.com/originals/b5/6c/73/b56c73ff38d26b0bf4515f4eafd3f241.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width: 300px;" align:="center">
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+      <div class="w3-third">
+
+      </div>
+    </div>
+  </div>
+  <img src="harry.png" style="width: 50%">
+  <!-- The Tour Section -->
+  <div class="w3-black w3-padding-30" id="tour"  >
+     <div style="max-width:2000px;margin-top:46px; background-image: url(https://i.pinimg.com/originals/47/04/58/47045845cd01f56dded85da38b011eb5.png)">
+      <h2 class="w3-wide w3-center">Covid-19 Update</h2>
+      <p class="w3-opacity w3-center"><i>Performances currently suspended at the Lyric Theatre.</i>
+      <br></p>
+      <h3 style="font-family: Lato, sans-serif; color: whitesmoke;"> </h1> 
+      <!-- 버튼 --> 
+      <button class="trigger">click here</button> 
+      <br>
+      </div>
+      <!-- 팝업 될 레이어 --> 
+      <div class="modal"> 
+          <div class="modal-content"> 
+              <span class="close-button">&times;</span> 
+              <p class="title">
+               
+                <h1>COVID-19 LATEST UPDATE: ALL PERFORMANCES POSTPONED</h1> 
+              <p>The producers of Harry Potter and the Cursed Child and the Lyric Theater are committed to the safety and peace of mind of all audiences, cast and company and theatre staff.  We have been closely monitoring the ongoing coronavirus (Covid-19) situation and as such, all performances of Harry Potter and the Cursed Child are postponed with return performances to be scheduled at a later date.
+              <br>
+              <br>
+                All patrons holding tickets will be contacted by their point of purchase regarding refund and exchange policies.
+                
+                For now, we would like to recognize our staff, artists and producers for their ongoing support. And especially you, for your continued commitment to the theatre community during this extremely difficult period. 
+                
+                We look forward to welcoming you at Harry Potter and the Cursed Child soon where the magic continues on stage!
+                <br>
+                <br>
+                
+                If you Purchased your tickets online: You will be contacted directly via email with the option to keep your tickets for a future performance or receive a full refund.
+                <br>
+                If you purchased tickets as part of a Group: Please contact your Group Sales Agent for more information regarding exchanges or refunds. Please retain your original tickets until you speak with the Group Sales Agent.
+                
+                If you purchased tickets through any other licensed sales channel (Broadway.com, TodayTix, etc.): Please return to the original point of purchase for more information regarding exchanges and refunds. If you have your tickets in hand, please retain them for a refund or exchange.
+                
+                For any other inquiries, please call 855-551-9777.</p>
+                <input type="button" id="cancel" value="ok!"> 
+              </div>
+              </form> 
+          </div> 
+      </div>
+ 
+<br>
+<br>
+<img src="harry.png" style="width: 50%">
+<div id="rhdduswjdqh" class="w3-container w3-content w3-padding-64">
+  <iframe width="800" height="500" src="https://www.youtube.com/embed/ao77ZUCQNnY?amp;vq=hd720&showinfo=0&autoplay=1&mute=1;loop=1;playlist=ao77ZUCQNnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  Watch the emotional moment Harry Potter and the Cursed Child returned to the stage in Melbourne
+  Cursed Child is now officially back at the Princess Theatre in Australia, where audiences were on-hand to give a moving gesture of thanks to the cast and crew, using magically lit-up wands. Grab a tissue and take a look at how the magical scene unfolded.
+  <br>
+  <h1>HARRY!!</h1>
+  <img src="https://images.ctfassets.net/usf1vwtuqyxm/6gVodGfVydwQHPvykRDKvA/04e8d0d415b57b0afec7a13301434959/HPCC-australia-reunion-shot-wands-up.jpg?w=914" style="max-width:500px;  display: inline-block;
+  float: left;">
+  We can also see footage of the thorough health and safety efforts that the gallant staff at the Princess Theatre have implemented to make the venue extra-safe for theatre goers during the pandemic. As you can see, a lot of hard work has gone into Cursed Child’s momentous comeback at the Princess Theatre, with the magic now back to cast a spell on Australian audiences.
+
+
+<h2><a href="https://www.youtube.com/watch?v=LtavcAJrQdo">MORE</a></h2>
+  <br>
+  <br>
+
+<br>
+<br>
+<div id="wpwkrwls">
+  <img src="https://pbs.twimg.com/media/C3CUURaUsAA_EOr.jpg" style="max-width: 800px">
+</div>
+<img src="harry.png" style="width: 50%">
+<div id="dhtlsmsrlf">
+  <img src="https://thumbs.gfycat.com/CarefreeUnlawfulCat-size_restricted.gif" style="max-width:500px" ></div>
+  <br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.116972195388!2d-73.98733768487443!3d40.759451942648596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c256598d232339%3A0xda8b85263f93969e!2zQnJvYWR3YXksIE5ldyBZb3JrLCDrr7jqta0!5e0!3m2!1sko!2skr!4v1622197899887!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-black w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  var modal = document.querySelector(".modal"); 
+          var trigger = document.querySelector(".trigger"); 
+          var closeButton = document.querySelector(".close-button"); 
+          var cancelButton = document.querySelector("#cancel");
+ 
+         //console.log(modal);
+ 
+         function toggleModal() { 
+              modal.classList.toggle("show-modal"); 
+          }
+ 
+         function windowOnClick(event) { 
+              if (event.target === modal) { 
+                  toggleModal(); 
+              } 
+          }
+ 
+         trigger.addEventListener("click", toggleModal); 
+          closeButton.addEventListener("click", toggleModal); 
+          cancel.addEventListener("click", toggleModal); 
+          window.addEventListener("click", windowOnClick); 
+}
+</script>
 
 </body>
 </html>
